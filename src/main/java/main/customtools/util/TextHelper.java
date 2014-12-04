@@ -1,4 +1,4 @@
-package main.basemod.util;
+package main.customtools.util;
 
 //General place to call text formatting from. You can alternatively use 'EnumChatFormatting'.
 

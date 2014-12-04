@@ -1,10 +1,10 @@
-package main.basemod.items;
+package main.customtools.items;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import main.basemod.BaseMod;
-import main.basemod.ModInformation;
-import main.basemod.util.TextHelper;
+import main.customtools.CustomTools;
+import main.customtools.ModInformation;
+import main.customtools.util.TextHelper;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -68,7 +68,7 @@ public class ItemBaseBook extends ItemBase {
 	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
 		switch (itemStack.getItemDamage()) {
 			case 0: {
-				player.openGui(BaseMod.instance, 0, world, (int) player.posX, (int) player.posY, (int) player.posZ);
+				player.openGui(CustomTools.instance, 0, world, (int) player.posX, (int) player.posY, (int) player.posZ);
 				return itemStack;
 			}
 			case 1: {

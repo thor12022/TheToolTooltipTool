@@ -1,12 +1,12 @@
-package main.basemod.items;
+package main.customtools.items;
 
 /*
  * Base item class for getting standard things done with quickly.
  * Extend this for pretty much every item you make.
  */
 
-import main.basemod.BaseMod;
-import main.basemod.ModInformation;
+import main.customtools.CustomTools;
+import main.customtools.ModInformation;
 import net.minecraft.item.Item;
 
 public class ItemBase extends Item {
@@ -17,7 +17,7 @@ public class ItemBase extends Item {
 
 		setUnlocalizedName(ModInformation.ID + "." + unlocName);
 		setTextureName(ModInformation.ID + ":" + textureName);
-		setCreativeTab(BaseMod.tabBaseMod);
+		setCreativeTab(CustomTools.tabBaseMod);
 	}
 
 	// If you are setting multiple textures for your item. IE: Metadata items.
@@ -25,6 +25,6 @@ public class ItemBase extends Item {
 		super();
 
 		setUnlocalizedName(ModInformation.ID + "." + unlocName);
-		setCreativeTab(BaseMod.tabBaseMod);
+		setCreativeTab(CustomTools.tabBaseMod);
 	}
 }

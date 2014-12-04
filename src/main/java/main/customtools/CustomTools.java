@@ -1,4 +1,4 @@
-package main.basemod;
+package main.customtools;
 
 /*
  * Check all the classes for (hopefully) detailed descriptions of what it does. There will also be tidbits of comments throughout the codebase.
@@ -13,23 +13,24 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import main.basemod.blocks.BlockRecipeRegistry;
-import main.basemod.blocks.BlockRegistry;
-import main.basemod.client.gui.CreativeTabBaseMod;
-import main.basemod.client.gui.GuiHandler;
-import main.basemod.items.ItemRecipeRegistry;
-import main.basemod.items.ItemRegistry;
-import main.basemod.proxies.CommonProxy;
-import main.basemod.util.EventHandler;
-import main.basemod.util.GenerationHandler;
-import main.basemod.util.OreDictHandler;
-import main.basemod.util.TextHelper;
+import main.customtools.blocks.BlockRecipeRegistry;
+import main.customtools.blocks.BlockRegistry;
+import main.customtools.client.gui.CreativeTabBaseMod;
+import main.customtools.client.gui.GuiHandler;
+import main.customtools.items.ItemRecipeRegistry;
+import main.customtools.items.ItemRegistry;
+import main.customtools.proxies.CommonProxy;
+import main.customtools.util.EventHandler;
+import main.customtools.util.GenerationHandler;
+import main.customtools.util.OreDictHandler;
+import main.customtools.util.TextHelper;
 import net.minecraft.creativetab.CreativeTabs;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = ModInformation.ID, name = ModInformation.NAME, version = ModInformation.VERSION, dependencies = ModInformation.DEPEND, guiFactory = ModInformation.GUIFACTORY)
-public class BaseMod {
+public class CustomTools {
 
 	@SidedProxy(clientSide = ModInformation.CLIENTPROXY, serverSide = ModInformation.COMMONPROXY)
 	public static CommonProxy proxy;
@@ -38,7 +39,7 @@ public class BaseMod {
 	public static Logger logger = LogManager.getLogger(ModInformation.NAME);
 
 	@Mod.Instance
-	public static BaseMod instance;
+	public static CustomTools instance;
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {

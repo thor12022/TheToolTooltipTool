@@ -1,4 +1,4 @@
-package main.basemod.blocks;
+package main.customtools.blocks;
 
 /*
  * General block that doesn't do anything.

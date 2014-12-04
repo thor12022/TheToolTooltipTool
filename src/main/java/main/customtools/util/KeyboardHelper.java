@@ -1,4 +1,4 @@
-package main.basemod.util;
+package main.customtools.util;
 
 //General place to store keyboard press events.
 

@@ -1,4 +1,4 @@
-package main.basemod.items;
+package main.customtools.items;
 
 /*
  * Class to register your blocks in.

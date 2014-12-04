@@ -1,4 +1,4 @@
-package main.basemod.blocks;
+package main.customtools.blocks;
 
 /*
  * General place to do all your block related recipe things'n'stuff.

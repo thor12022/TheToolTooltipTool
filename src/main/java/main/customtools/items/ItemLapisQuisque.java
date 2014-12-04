@@ -1,4 +1,4 @@
-package main.basemod.items;
+package main.customtools.items;
 
 /*
  * The most simple item you can make. It literally does nothing but set a texture and name.

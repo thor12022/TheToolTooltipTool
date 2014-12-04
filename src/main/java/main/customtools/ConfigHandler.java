@@ -1,4 +1,4 @@
-package main.basemod;
+package main.customtools;
 
 /*
  * Creation and usage of the config file.

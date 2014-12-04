@@ -1,4 +1,4 @@
-package main.basemod.client.gui.BaseBook;
+package main.customtools.client.gui.BaseBook;
 
 public class BaseBookPage {
 

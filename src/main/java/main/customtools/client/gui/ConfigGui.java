@@ -1,4 +1,4 @@
-package main.basemod.client.gui;
+package main.customtools.client.gui;
 
 /*
  * Creates a config GUI for your mod. This requires an mcmod.info file with the correct modid. These are dummy sections that don't do anything.
@@ -6,8 +6,8 @@ package main.basemod.client.gui;
 
 import cpw.mods.fml.client.config.GuiConfig;
 import cpw.mods.fml.client.config.IConfigElement;
-import main.basemod.ModInformation;
-import main.basemod.util.TextHelper;
+import main.customtools.ModInformation;
+import main.customtools.util.TextHelper;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigCategory;
 import net.minecraftforge.common.config.ConfigElement;
@@ -15,7 +15,7 @@ import net.minecraftforge.common.config.ConfigElement;
 import java.util.ArrayList;
 import java.util.List;
 
-import static main.basemod.ConfigHandler.*;
+import static main.customtools.ConfigHandler.*;
 
 public class ConfigGui extends GuiConfig {
 

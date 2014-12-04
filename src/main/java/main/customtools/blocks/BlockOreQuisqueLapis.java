@@ -1,10 +1,10 @@
-package main.basemod.blocks;
+package main.customtools.blocks;
 
 /*
  * General ore that drops and item instead of itself when broken.
  */
 
-import main.basemod.items.ItemRegistry;
+import main.customtools.items.ItemRegistry;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 

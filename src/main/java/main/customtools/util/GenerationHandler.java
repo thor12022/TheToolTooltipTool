@@ -1,10 +1,10 @@
-package main.basemod.util;
+package main.customtools.util;
 
 //This class handles all generation the mod contains.
 
 import cpw.mods.fml.common.IWorldGenerator;
-import main.basemod.ConfigHandler;
-import main.basemod.blocks.BlockRegistry;
+import main.customtools.ConfigHandler;
+import main.customtools.blocks.BlockRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;

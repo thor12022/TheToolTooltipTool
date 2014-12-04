@@ -1,4 +1,4 @@
-package main.basemod.util;
+package main.customtools.util;
 
 /*
  * Class for most of your events to be registered in.
@@ -7,9 +7,9 @@ package main.basemod.util;
 
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import main.basemod.BaseMod;
-import main.basemod.ConfigHandler;
-import main.basemod.ModInformation;
+import main.customtools.ConfigHandler;
+import main.customtools.CustomTools;
+import main.customtools.ModInformation;
 
 public class EventHandler {
 
@@ -17,7 +17,7 @@ public class EventHandler {
 	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
 		if (eventArgs.modID.equals(ModInformation.ID)) {
 			ConfigHandler.syncConfig();
-			BaseMod.logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.config.refresh"));
+			CustomTools.logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.config.refresh"));
 		}
 	}
 }

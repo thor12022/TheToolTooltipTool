@@ -1,12 +1,12 @@
-package main.basemod.blocks;
+package main.customtools.blocks;
 
 /*
  * Base block class for getting standard things done with quickly.
  * Extend this for pretty much every block you make.
  */
 
-import main.basemod.BaseMod;
-import main.basemod.ModInformation;
+import main.customtools.CustomTools;
+import main.customtools.ModInformation;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -18,7 +18,7 @@ public class BlockBase extends Block {
 
 		setBlockName(ModInformation.ID + "." + unlocName);
 		setBlockTextureName(ModInformation.ID + ":" + textureName);
-		setCreativeTab(BaseMod.tabBaseMod);
+		setCreativeTab(CustomTools.tabBaseMod);
 		setStepSound(soundType);
 		setHardness(hardness);
 	}
@@ -28,7 +28,7 @@ public class BlockBase extends Block {
 		super(material);
 
 		setBlockName(ModInformation.ID + "." + unlocName);
-		setCreativeTab(BaseMod.tabBaseMod);
+		setCreativeTab(CustomTools.tabBaseMod);
 		setStepSound(soundType);
 		setHardness(hardness);
 	}

@@ -1,9 +1,9 @@
-package main.basemod.util;
+package main.customtools.util;
 
 //General place to register all oreDict recipes.
 
-import main.basemod.blocks.BlockRegistry;
-import main.basemod.items.ItemRegistry;
+import main.customtools.blocks.BlockRegistry;
+import main.customtools.items.ItemRegistry;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;

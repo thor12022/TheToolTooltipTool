@@ -1,4 +1,4 @@
-package main.basemod.client.gui;
+package main.customtools.client.gui;
 
 //Initializes the config GUI. You probably won't need to touch this.
 

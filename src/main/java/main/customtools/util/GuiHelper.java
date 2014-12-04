@@ -1,4 +1,4 @@
-package main.basemod.util;
+package main.customtools.util;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreenBook;
