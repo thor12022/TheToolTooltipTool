@@ -1,14 +1,14 @@
 [
 {
-  "modid": "basemod",
-  "name": "Base Mod",
-  "description": "Base mod to build from.",
+  "modid": "customtools",
+  "name": "Custom Tools",
+  "description": "Add your own custom tools",
   "version": "0.0.0",
   "mcversion": "1.7.10",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ModDeveloper"],
-  "credits": "TehNut for creating this base for me.",
+  "authorList": ["thor12022"],
+  "credits": "TehNut for creating the base for me.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
