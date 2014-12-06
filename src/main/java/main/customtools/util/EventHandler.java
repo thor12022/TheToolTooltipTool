@@ -11,13 +11,16 @@ import main.customtools.ConfigHandler;
 import main.customtools.CustomTools;
 import main.customtools.ModInformation;
 
-public class EventHandler {
+public class EventHandler
+{
 
-	@SubscribeEvent
-	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
-		if (eventArgs.modID.equals(ModInformation.ID)) {
-			ConfigHandler.syncConfig();
-			CustomTools.logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.config.refresh"));
-		}
-	}
+   @SubscribeEvent
+   public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs)
+   {
+      if(eventArgs.modID.equals(ModInformation.ID))
+      {
+         ConfigHandler.syncConfig();
+         CustomTools.logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.config.refresh"));
+      }
+   }
 }

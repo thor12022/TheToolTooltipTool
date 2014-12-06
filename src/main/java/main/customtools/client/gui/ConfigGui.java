@@ -17,20 +17,28 @@ import java.util.List;
 
 import static main.customtools.ConfigHandler.*;
 
-public class ConfigGui extends GuiConfig {
+public class ConfigGui extends GuiConfig
+{
 
-	public ConfigGui(GuiScreen parentScreen) {
-		super(parentScreen, getConfigElements(parentScreen), ModInformation.ID, false, false, TextHelper.localize("gui." + ModInformation.ID + ".config.title"));
-	}
+   public ConfigGui(GuiScreen parentScreen)
+   {
+      super(parentScreen, 
+            getConfigElements(parentScreen),
+            ModInformation.ID,
+            false,
+            false,
+            TextHelper.localize("gui." + ModInformation.ID + ".config.title"));
+   }
 
-	@SuppressWarnings("rawtypes")
-	private static List<IConfigElement> getConfigElements(GuiScreen parent) {
-		List<IConfigElement> list = new ArrayList<IConfigElement>();
+   @SuppressWarnings("rawtypes")
+   private static List<IConfigElement> getConfigElements(GuiScreen parent)
+   {
+      List<IConfigElement> list = new ArrayList<IConfigElement>();
 
-		// adds sections declared in ConfigHandler. toLowerCase() is used because the configuration class automatically does this, so must we.
-		list.add(new ConfigElement<ConfigCategory>(config.getCategory(exampleSection.toLowerCase())));
-		list.add(new ConfigElement<ConfigCategory>(config.getCategory(generation.toLowerCase())));
+      // adds sections declared in ConfigHandler. toLowerCase() is used because the configuration class automatically does this, so must we.
+      list.add(new ConfigElement<ConfigCategory>(config.getCategory(exampleSection.toLowerCase())));
+      list.add(new ConfigElement<ConfigCategory>(config.getCategory(generation.toLowerCase())));
 
-		return list;
-	}
+      return list;
+   }
 }

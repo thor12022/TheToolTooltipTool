@@ -5,25 +5,28 @@ package main.customtools.items;
  */
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import main.customtools.blocks.BlockRegistry;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
-public class ItemRecipeRegistry {
+public class ItemRecipeRegistry
+{
 
-	// Self explanatory. Continue these how you wish. EG: registerSmeltingRecipes
-	private static void registerShapedRecipes() {
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.blaze_rod), new Object[]{"X  ", " X ", "  X", 'X', "powderBlaze"}));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.blaze_rod), new Object[]{"  X", " X ", "X  ", 'X', "powderBlaze"}));
-	}
+   // Self explanatory. Continue these how you wish. EG: registerSmeltingRecipes
+   private static void registerShapedRecipes()
+   {
+      //GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.blaze_rod), 
+      //                       new Object[] { "X  ", " X ", "  X", 'X', "powderBlaze" }));
 
-	private static void registerShaplessRecipes() {
-		GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.quisqueLapisBlock), new ItemStack(ItemRegistry.quisqueLapis, 9));
-	}
+   private static void registerShaplessRecipes()
+   {
+      // GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.quisqueLapisBlock), 
+      //                                 new ItemStack(ItemRegistry.quisqueLapis, 9));
+   }
 
-	public static void registerItemRecipes() {
-		registerShapedRecipes();
-		registerShaplessRecipes();
-	}
+   public static void registerItemRecipes()
+   {
+      registerShapedRecipes();
+      registerShaplessRecipes();
+   }
 }

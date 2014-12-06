@@ -13,16 +13,12 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import main.customtools.blocks.BlockRecipeRegistry;
-import main.customtools.blocks.BlockRegistry;
 import main.customtools.client.gui.CreativeTabBaseMod;
 import main.customtools.client.gui.GuiHandler;
 import main.customtools.items.ItemRecipeRegistry;
 import main.customtools.items.ItemRegistry;
 import main.customtools.proxies.CommonProxy;
 import main.customtools.util.EventHandler;
-import main.customtools.util.GenerationHandler;
-import main.customtools.util.OreDictHandler;
 import main.customtools.util.TextHelper;
 import net.minecraft.creativetab.CreativeTabs;
 
@@ -30,43 +26,43 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = ModInformation.ID, name = ModInformation.NAME, version = ModInformation.VERSION, dependencies = ModInformation.DEPEND, guiFactory = ModInformation.GUIFACTORY)
-public class CustomTools {
+public class CustomTools
+{
 
-	@SidedProxy(clientSide = ModInformation.CLIENTPROXY, serverSide = ModInformation.COMMONPROXY)
-	public static CommonProxy proxy;
+   @SidedProxy(clientSide = ModInformation.CLIENTPROXY, serverSide = ModInformation.COMMONPROXY)
+   public static CommonProxy proxy;
 
-	public static CreativeTabs tabBaseMod = new CreativeTabBaseMod(ModInformation.ID + ".creativeTab");
-	public static Logger logger = LogManager.getLogger(ModInformation.NAME);
+   public static CreativeTabs creativeTabCustomTools = new CreativeTabBaseMod(ModInformation.ID + ".creativeTab");
+   public static Logger logger = LogManager.getLogger(ModInformation.NAME);
 
-	@Mod.Instance
-	public static CustomTools instance;
+   @Mod.Instance
+   public static CustomTools instance;
 
-	@Mod.EventHandler
-	public void preInit(FMLPreInitializationEvent event) {
-		logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.preInit"));
+   @Mod.EventHandler
+   public void preInit(FMLPreInitializationEvent event)
+   {
+      logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.preInit"));
 
-		ConfigHandler.init(event.getSuggestedConfigurationFile());
+      ConfigHandler.init(event.getSuggestedConfigurationFile());
 
-		ItemRegistry.registerItems();
-		BlockRegistry.registerBlocks();
+      ItemRegistry.registerItems();
 
-		OreDictHandler.registerOreDict();
-		FMLCommonHandler.instance().bus().register(new EventHandler());
-		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+      FMLCommonHandler.instance().bus().register(new EventHandler());
+      NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 
-		GameRegistry.registerWorldGenerator(new GenerationHandler(), 2);
-	}
+   }
 
-	@Mod.EventHandler
-	public void init(FMLInitializationEvent event) {
-		logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.init"));
+   @Mod.EventHandler
+   public void init(FMLInitializationEvent event)
+   {
+      logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.init"));
 
-		ItemRecipeRegistry.registerItemRecipes();
-		BlockRecipeRegistry.registerBlockRecipes();
-	}
+      ItemRecipeRegistry.registerItemRecipes();
+   }
 
-	@Mod.EventHandler
-	public void postInit(FMLPostInitializationEvent event) {
-		logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.postInit"));
-	}
+   @Mod.EventHandler
+   public void postInit(FMLPostInitializationEvent event)
+   {
+      logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.postInit"));
+   }
 }
