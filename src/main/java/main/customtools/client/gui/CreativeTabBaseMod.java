@@ -2,6 +2,7 @@ package main.customtools.client.gui;
 
 //Creates your creative tab.
 
+import main.customtools.CustomTools;
 import main.customtools.ModInformation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -22,11 +23,11 @@ public class CreativeTabBaseMod extends CreativeTabs
    }
 
    // The tab icon is what you return here.
-   //@Override
-   //public ItemStack getIconItemStack()
-   //{
-      //return new ItemStack(ItemRegistry.exampleItem);
-   //}
+   @Override
+   public ItemStack getIconItemStack()
+   {
+      return new ItemStack(CustomTools.pickaxes[0]);
+   }
 
    @Override
    public Item getTabIconItem()

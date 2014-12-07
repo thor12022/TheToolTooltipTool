@@ -40,6 +40,7 @@ public class CustomTools
    public static CreativeTabs creativeTabCustomTools = new CreativeTabBaseMod(ModInformation.ID + ".creativeTab");
    public static Logger logger = LogManager.getLogger(ModInformation.NAME);
    public static Configuration config;
+   public static Item[] pickaxes;
    
    @Mod.Instance
    public static CustomTools instance;
@@ -51,9 +52,9 @@ public class CustomTools
 
       config = new Configuration(event.getSuggestedConfigurationFile());
 
-      int toolCount = config.get("pickaxes", "pickaxeCount", 0, "Number of pickaxes added", 0, 32).getInt();
+      int toolCount = config.get("pickaxes", "pickaxeCount", 1, "Number of pickaxes added", 0, 32).getInt();
       
-      Item[] pickaxes  = new Item[32];
+      pickaxes = new Item[32];
       
       String name, texture;
       int harvestLevel, maxUses, enchantability;
@@ -61,15 +62,15 @@ public class CustomTools
       
       for( int count = 0; count < toolCount; ++count)
       {
-         name = config.get("pickaxes.pickaxe"+count, "name", "customPickaxe"+count, "Dsiplayed name of Pickaxe").getString();
-         texture = config.get("pickaxes.pickaxe"+count, "texture", "customtools:customPickaxe", "Texture name of pickaxe").getString();
-         
          harvestLevel = config.get("pickaxes.pickaxe"+count, "harvestLevel", 0, "Harvest Level of Pickaxe; 3=DIAMOND, 2=IRON, 1=STONE, 0=WOOD/GOLD", 0, 16).getInt();
          maxUses = config.get("pickaxes.pickaxe"+count, "maxUses", 32, "Max uses of Pickaxe; wood=59, stone=131, iron=250, diamond=1561, gold=32").getInt();
          enchantability = config.get("pickaxes.pickaxe"+count, "enchantability", 0, "Enchantability of pickaxe; Diamond=??, Iron=??, Stone=??, Wood=??, Gold=??").getInt();
          
-         efficiency = config.getFloat("pickaxes.pickaxe"+count, "efficiency", 1.0f, 0f, Float.MAX_VALUE, "Efficiency of pickaxe");
+         efficiency = (float)config.get("pickaxes.pickaxe"+count, "efficiency", 1.0f, "Efficiency of pickaxe").getDouble();
          damage = config.get("pickaxes.pickaxe"+count, "damage", 1, "Damage against entities").getInt();
+         
+         name = config.get("pickaxes.pickaxe"+count, "name", "Custom Pickaxe", "Displayed name of Pickaxe").getString();
+         texture = config.get("pickaxes.pickaxe"+count, "texture", "customtools:customPickaxe", "Texture name of pickaxe").getString();
          
          Item.ToolMaterial toolMaterial = EnumHelper.addToolMaterial("customPickaxe"+count, harvestLevel, maxUses, efficiency, damage, enchantability);
          pickaxes[count] = new ItemCustomPick(toolMaterial, name, texture);
