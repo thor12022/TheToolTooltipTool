@@ -36,8 +36,7 @@ public class ConfigGui extends GuiConfig
       List<IConfigElement> list = new ArrayList<IConfigElement>();
 
       // adds sections declared in ConfigHandler. toLowerCase() is used because the configuration class automatically does this, so must we.
-      list.add(new ConfigElement<ConfigCategory>(config.getCategory(exampleSection.toLowerCase())));
-      list.add(new ConfigElement<ConfigCategory>(config.getCategory(generation.toLowerCase())));
+      list.add(new ConfigElement<ConfigCategory>(config.getCategory(sectionName.toLowerCase())));
 
       return list;
    }

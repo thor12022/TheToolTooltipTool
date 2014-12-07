@@ -3,7 +3,6 @@ package main.customtools.client.gui;
 //Creates your creative tab.
 
 import main.customtools.ModInformation;
-import main.customtools.items.ItemRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
