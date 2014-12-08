@@ -5,22 +5,30 @@ package main.customtools.util;
  * Remember that there are two different registries for Events. This one will not work for everything.
  */
 
-import cpw.mods.fml.client.event.ConfigChangedEvent;
+import org.lwjgl.input.Keyboard;
+
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import main.customtools.ConfigHandler;
 import main.customtools.CustomTools;
 import main.customtools.ModInformation;
+import main.customtools.client.gui.TooltipHelper;
+import net.minecraft.item.ItemTool;
+import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 
 public class EventHandler
-{
-
+{   
    @SubscribeEvent
-   public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs)
+   public void onItemTooltip(ItemTooltipEvent eventArg)
    {
-      if(eventArgs.modID.equals(ModInformation.ID))
+      if( eventArg.itemStack.getItem() instanceof ItemTool)
       {
-         ConfigHandler.syncConfig();
-         CustomTools.logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.config.refresh"));
+         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
+         {
+            TooltipHelper.AppendTooltip(eventArg.itemStack, eventArg.toolTip );
+         }
+         else
+         {
+            eventArg.toolTip.add(TextHelper.localize(ModInformation.ID + ".tooltip.shiftMessage"));
+         }
       }
    }
 }

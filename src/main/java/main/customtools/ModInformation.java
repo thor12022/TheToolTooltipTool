@@ -14,5 +14,4 @@ public class ModInformation
    public static final String VERSION = "0.0.0";
    public static final String CLIENTPROXY = "main.customtools.proxies.ClientProxy";
    public static final String COMMONPROXY = "main.customtools.proxies.CommonProxy";
-   public static final String GUIFACTORY = "main.customtools.client.gui.ConfigGuiFactory";
 }

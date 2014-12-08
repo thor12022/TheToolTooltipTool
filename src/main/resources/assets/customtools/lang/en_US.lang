@@ -4,6 +4,15 @@ itemGroup.customtools.creativeTab=Custom Tools
 #CONFIG GUI
 gui.customtools.config.title=Custom Tools Configuration
 
+#TOOLTIPS
+customtools.tooltip.maxDamage=Max Damage
+customtools.tooltip.harvestLevel=Harvest Level
+customtools.tooltip.digSpeed=Dig Speed
+customtools.tooltip.shovel=Shovel
+customtools.tooltip.pickaxe=Pickaxe
+customtools.tooltip.axe=Axe
+customtools.tooltip.enchantability=Enchantability
+customtools.tooltip.shiftMessage=Press SHIFT for more information
 
 #CONSOLE LOG
 info.customtools.console.config.refresh=Refreshing configuration file.
