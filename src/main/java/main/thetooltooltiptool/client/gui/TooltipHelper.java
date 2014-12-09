@@ -1,10 +1,10 @@
-package main.customtools.client.gui;
+package main.thetooltooltiptool.client.gui;
 
 import java.util.List;
 import java.util.Set;
 
-import main.customtools.ModInformation;
-import main.customtools.util.TextHelper;
+import main.thetooltooltiptool.ModInformation;
+import main.thetooltooltiptool.util.TextHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirt;
 import net.minecraft.block.BlockLog;

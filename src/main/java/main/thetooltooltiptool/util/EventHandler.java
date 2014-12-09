@@ -1,4 +1,4 @@
-package main.customtools.util;
+package main.thetooltooltiptool.util;
 
 /*
  * Class for most of your events to be registered in.
@@ -8,9 +8,9 @@ package main.customtools.util;
 import org.lwjgl.input.Keyboard;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import main.customtools.CustomTools;
-import main.customtools.ModInformation;
-import main.customtools.client.gui.TooltipHelper;
+import main.thetooltooltiptool.TheToolTooltipTool;
+import main.thetooltooltiptool.ModInformation;
+import main.thetooltooltiptool.client.gui.TooltipHelper;
 import net.minecraft.item.ItemTool;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 

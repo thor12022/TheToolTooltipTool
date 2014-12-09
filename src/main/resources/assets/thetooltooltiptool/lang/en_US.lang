@@ -1,0 +1,16 @@
+#TOOLTIPS
+thetooltooltiptool.tooltip.maxDamage=Max Damage
+thetooltooltiptool.tooltip.harvestLevel=Harvest Level
+thetooltooltiptool.tooltip.digSpeed=Dig Speed
+thetooltooltiptool.tooltip.shovel=Shovel
+thetooltooltiptool.tooltip.paxel=Paxel
+thetooltooltiptool.tooltip.pickaxe=Pickaxe
+thetooltooltiptool.tooltip.axe=Axe
+thetooltooltiptool.tooltip.enchantability=Enchantability
+thetooltooltiptool.tooltip.shiftMessage=Press SHIFT for more information
+
+#CONSOLE LOG
+info.thetooltooltiptool.console.config.refresh=Refreshing configuration file.
+info.thetooltooltiptool.console.load.preInit=Begin Pre-initialization
+info.thetooltooltiptool.console.load.init=Begin Initialization
+info.thetooltooltiptool.console.load.postInit=Begin Post-initialization

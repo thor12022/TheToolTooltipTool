@@ -1,4 +1,4 @@
-package main.customtools.util;
+package main.thetooltooltiptool.util;
 
 //General place to call text formatting from. You can alternatively use 'EnumChatFormatting'.
 
