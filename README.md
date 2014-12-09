@@ -1,6 +1,6 @@
 So, you know that feeling of uncertainty? Is the Metalurgy Tartarite pickaxe better or worse than the Galacticraft Desh pickaxe? That's not even taking into account the Thermal Expansion Invar pickaxe, the Mekanism pickaxes. . . Oh yeah, Mekanism, what about paxels?!
 
-This mod adds one simple thing, a tooltip visible on tools when SHIFT is pressed that tells you a tool's Max Durability, Efficiency, Harvest Level and Enchantability. It will even display information for each tool type for multi-tools like paxels.
+This mod adds one simple thing, a tooltip visible on tools when SHIFT is pressed that tells you a tool's Max Durability, Efficiency, Harvest Level and Enchantability. It should even display information for each tool type for multi-tools.
 
 Downloads can be found on the TheToolTooltipTool Releases page.
 
