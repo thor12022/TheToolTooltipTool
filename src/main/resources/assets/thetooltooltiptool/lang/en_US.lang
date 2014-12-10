@@ -1,5 +1,6 @@
 #TOOLTIPS
 thetooltooltiptool.tooltip.maxDamage=Max Damage
+thetooltooltiptool.tooltip.averageMaxDamage=Average Max Damage
 thetooltooltiptool.tooltip.harvestLevel=Harvest Level
 thetooltooltiptool.tooltip.digSpeed=Dig Speed
 thetooltooltiptool.tooltip.shovel=Shovel
