@@ -11,7 +11,5 @@ thetooltooltiptool.tooltip.enchantability=Enchantability
 thetooltooltiptool.tooltip.shiftMessage=Press SHIFT for more information
 
 #CONSOLE LOG
-info.thetooltooltiptool.console.config.refresh=Refreshing configuration file.
 info.thetooltooltiptool.console.load.preInit=Begin Pre-initialization
-info.thetooltooltiptool.console.load.init=Begin Initialization
-info.thetooltooltiptool.console.load.postInit=Begin Post-initialization
+warn.thetooltooltiptool.console.load.preInitServer=DISABLED: Server Environment

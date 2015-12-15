@@ -15,6 +15,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.SideOnly;
 import main.thetooltooltiptool.proxies.CommonProxy;
 import main.thetooltooltiptool.util.EventHandler;
 import main.thetooltooltiptool.util.TextHelper;
@@ -31,7 +32,7 @@ import org.apache.logging.log4j.Logger;
 public class TheToolTooltipTool
 {
 
-   @SidedProxy(clientSide = ModInformation.CLIENTPROXY)
+   @SidedProxy(clientSide = ModInformation.CLIENTPROXY, serverSide = ModInformation.COMMONPROXY)
    public static CommonProxy proxy;
 
    public static Logger logger = LogManager.getLogger(ModInformation.NAME);
@@ -46,20 +47,14 @@ public class TheToolTooltipTool
    @Mod.EventHandler
    public void preInit(FMLPreInitializationEvent event)
    {
-      logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.preInit"));
-      
-      MinecraftForge.EVENT_BUS.register(new EventHandler());
-   }
-
-   @Mod.EventHandler
-   public void init(FMLInitializationEvent event)
-   {
-      logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.init"));
-   }
-
-   @Mod.EventHandler
-   public void postInit(FMLPostInitializationEvent event)
-   {
-      logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.postInit"));
+      if(event.getSide().isClient())
+      {
+    	  MinecraftForge.EVENT_BUS.register(new EventHandler());
+    	  logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.preInit"));
+      }
+      else
+      {
+    	  logger.warn(TextHelper.localize("warn." + ModInformation.ID + ".console.load.preInitServer"));
+      }
    }
 }
